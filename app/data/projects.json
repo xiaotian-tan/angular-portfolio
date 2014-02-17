@@ -1,0 +1,46 @@
+[
+	{
+		"id": "1",
+		"slug": "project-one",
+		"title": "project one",
+		"description": "<p>Lalla Rookh Bar & Eating House is a new dining establishment open in the heart of Perth’s CBD. The creative team that brought us Helvetica bar, are behind this trendy new venue that is completed by the addition of a wine store.</p>",
+		"skills": [
+			"python", 
+			"django",
+			"jQuery",
+			"HTML & CSS"
+		],
+		"client": "Lalla Rookh",
+		"agency": "Butterfly Internet",
+		"image" : "img/projects/lallarookh2.jpg",
+		"link": "http://domain.com.au"
+	},
+	{
+		"id": "2",
+		"slug": "project-two",
+		"title": "project two",
+		"description": "<p>Project description</p>",
+		"skills": [
+			"php", 
+			"mysql"
+		],
+		"client": "",
+		"agency": "Butterfly Internet",
+		"image" : "img/projects/lallarookh2.jpg",
+		"link": "http://domain.com.au"
+	},
+	{
+		"id": "3",
+		"slug": "project-three",
+		"title": "project three",
+		"description": "<p>Project description</p>",
+		"skills": [
+			"php", 
+			"mysql"
+		],
+		"client": "",
+		"agency": "Butterfly Internet",
+		"image" : "img/projects/lallarookh2.jpg",
+		"link": "http://domain.com.au"
+	}
+]
