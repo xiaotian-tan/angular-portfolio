@@ -1,8 +1,25 @@
 <div class="container projects">
-	
+	<div class="project-slider">
+		<div ng-repeat="project in projects" class="project-detail" ng-show="isActive($index)">
+			<!-- project details -->
+			<img ng-src="{{project.image}}" class="project-img" width="500"/>
+			<h2>{{ project.title }}</h2>
+			<div class="project-desc" ng-bind-html="project.description">
+			</div>
+			<div ng-repeat="skill in project.skills">
+				{{ skill }}
+			</div>
+			<!-- prev / next buttons -->
+	        <a class="arrow prev" href="" ng-click="showPrev()">Prev Project</a>
+	        <a class="arrow next" href="" ng-click="showNext()">Next Project</a>
+		</div>
+	</div>
 	<div class="project-lists">
 		<div ng-repeat="project in projects" class="each-project">
 			<h2>{{ project.title }}</h2>
+			<a href="" ng-click="showProject($index);">
+            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" width="100" />
+            </a>
 		</div>
 	</div>
 	
