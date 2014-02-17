@@ -1,24 +1,34 @@
 <div class="container projects">
-	<div class="project-slider">
-		<div ng-repeat="project in projects" class="project-detail" ng-show="isActive($index)">
+	<div class="row" id="projectslider">
+		<div ng-repeat="project in projects" class="project-detail col-sm-12" ng-show="isActive($index)" ng-animate="'slide'">
 			<!-- project details -->
-			<img ng-src="{{project.image}}" class="project-img" width="500"/>
-			<h2>{{ project.title }}</h2>
-			<div class="project-desc" ng-bind-html="project.description">
+			<div class="col-sm-6">
+				<img ng-src="{{project.image}}" class="project-img img-responsive"/>
 			</div>
-			<div ng-repeat="skill in project.skills">
-				{{ skill }}
-			</div>
-			<!-- prev / next buttons -->
-	        <a class="arrow prev" href="" ng-click="showPrev()">Prev Project</a>
-	        <a class="arrow next" href="" ng-click="showNext()">Next Project</a>
+			<div class="col-sm-6">
+				<h2>{{ project.title }}</h2>
+				<div class="project-desc" ng-bind-html="project.description">
+				</div>
+				<div ng-repeat="skill in project.skills">
+					{{ skill }}
+				</div>
+	        </div>
+	        <!-- prev / next buttons -->
+			<div id="project-navigation" class="col-sm-12">
+		        <ul class="nav navbar-nav pull-right">
+		          	<li><a class="arrow prev" href="" ng-click="showPrev()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+			        <li><a class="arrow next" href="" ng-click="showNext()"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+			        <li><a class="button" ng-href="{{ project.link }}"><span class="glyphicon glyphicon-link"></span></a></li>
+			        <!-- <li><a class="button" href="" ng-click="closeProject()"><span class="glyphicon glyphicon-remove-circle"></span></a></li> -->
+		        </ul>
+	      	</div><!--/.nav-collapse -->
 		</div>
 	</div>
-	<div class="project-lists">
-		<div ng-repeat="project in projects" class="each-project">
+	<div class="row project-lists">
+		<div ng-repeat="project in projects" class="each-project col-sm-4">
 			<h2>{{ project.title }}</h2>
-			<a href="" ng-click="showProject($index);">
-            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" width="100" />
+			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
+            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive"/>
             </a>
 		</div>
 	</div>

@@ -5,13 +5,14 @@
 angular.module('myApp.controllers', []).
 	controller('WelcomeController', ['$scope', function($scope){
 
-		
-		
+
+
   	}]).
-  	controller('ProjectController', ['$scope', 'Portfolio', function($scope, Portfolio) {
+  	controller('ProjectController', ['$scope', 'Portfolio', '$location', '$anchorScroll', 
+  		function($scope, Portfolio, $location, $anchorScroll) {
 
 		// not show project detail as default
-		$scope._Index = -1;
+		$scope._Index = 0;
 
 		// get projects from service
 		$scope.projects = Portfolio.query();
@@ -32,8 +33,17 @@ angular.module('myApp.controllers', []).
 		};
 
 		// show project on click
-		$scope.showProject = function (index){
+		$scope.scrollTo = function (id, event, index){
+			// $location.hash(id);
+		    // call $anchorScroll()
+		    $anchorScroll();
+
 			$scope._Index = index;
+			event.preventDefault();
+		    event.stopPropagation();
 		};
 
+		$scope.closeProject = function (){
+			$scope._Index = -1;
+		}
 	}]);

@@ -10,6 +10,9 @@
 
     <title>My AngularJS App</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css"/>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -22,7 +25,7 @@
     <![endif]-->
   </head>
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,19 +34,30 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">Xiaotian Tan</a>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#/">Home</a></li>
-          <li><a href="#/projects">Projects</a></li>
+        <ul class="nav navbar-nav pull-right" id="main-menu" navMenu="active">
+          <li data-active-link=""><a href="#/">Home</a></li>
+          <li data-active-link=""><a href="#/projects">Projects</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  <div ng-view></div>
+  <div data-ng-view="" class="page"></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <div id="footer">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav pull-right" id="footer-menu" navMenu="active">
+          <a href="#" ><i class="fa fa-facebook-square fa-3x"></i></a>
+          <a href="#" ><i class="fa fa-linkedin-square fa-3x"></i></a>
+          <a href="#" ><i class="fa fa-github fa-3x"></i></a>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -52,6 +66,7 @@
   <script src="lib/angular/angular-route.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
   <script src="lib/angular/angular-sanitize.js"></script>
+  <script src="lib/angular/angular-animate.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
