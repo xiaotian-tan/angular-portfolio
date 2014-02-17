@@ -3,9 +3,8 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+  controller('ProjectController', ['$scope', 'Portfolio', function($scope, Portfolio) {
 
-  }])
-  .controller('MyCtrl2', [function() {
+  	$scope.projects = Portfolio.query();
 
   }]);
