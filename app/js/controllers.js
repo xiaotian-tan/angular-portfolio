@@ -12,10 +12,16 @@ angular.module('myApp.controllers', []).
   		function($scope, Portfolio, $location, $anchorScroll) {
 
 		// not show project detail as default
-		$scope._Index = 0;
+		$scope._Index = -1;
+
+		$scope._showProject = false;
 
 		// get projects from service
 		$scope.projects = Portfolio.query();
+
+		$scope.toggleProject = function (){
+			return $scope._showProject;
+		}
 
 		// detect if current project slide is active
 		$scope.isActive = function (index){
@@ -39,11 +45,12 @@ angular.module('myApp.controllers', []).
 		    $anchorScroll();
 
 			$scope._Index = index;
+			$scope._showProject = true;
 			event.preventDefault();
 		    event.stopPropagation();
 		};
 
 		$scope.closeProject = function (){
-			$scope._Index = -1;
+			$scope._showProject = false;
 		}
 	}]);

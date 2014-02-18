@@ -28,7 +28,7 @@
   <div class="navbar" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -36,7 +36,7 @@
         </button>
         <a class="navbar-brand" href="#">Xiaotian Tan</a>
       </div>
-      <div class="collapse navbar-collapse">
+      <div collapse="isCollapsed" class="navbar-collapse">
         <ul class="nav navbar-nav pull-right" id="main-menu" navMenu="active">
           <li data-active-link=""><a href="#/">Home</a></li>
           <li data-active-link=""><a href="#/projects">Projects</a></li>
@@ -62,11 +62,14 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
   <script src="lib/angular/angular-sanitize.js"></script>
   <script src="lib/angular/angular-animate.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>

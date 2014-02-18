@@ -1,6 +1,7 @@
 <div class="container projects">
-	<div class="row" id="projectslider">
-		<div ng-repeat="project in projects" class="project-detail col-sm-12" ng-show="isActive($index)" ng-animate="'slide'">
+	<div class="row" id="projectslider" ng-show="toggleProject()">
+		<div ng-repeat="project in projects" class="project-detail col-sm-12" 
+		ng-show="isActive($index)" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
 			<!-- project details -->
 			<div class="col-sm-6">
 				<img ng-src="{{project.image}}" class="project-img img-responsive"/>
@@ -19,9 +20,10 @@
 		          	<li><a class="arrow prev" href="" ng-click="showPrev()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
 			        <li><a class="arrow next" href="" ng-click="showNext()"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
 			        <li><a class="button" ng-href="{{ project.link }}"><span class="glyphicon glyphicon-link"></span></a></li>
-			        <!-- <li><a class="button" href="" ng-click="closeProject()"><span class="glyphicon glyphicon-remove-circle"></span></a></li> -->
+			        <li><a class="button" href="" ng-click="closeProject()" close-slide="projectslider"><span class="glyphicon glyphicon-remove-circle"></span></a></li>
 		        </ul>
 	      	</div><!--/.nav-collapse -->
+	      	<div class="clearfix"></div>
 		</div>
 	</div>
 	<div class="row project-lists">

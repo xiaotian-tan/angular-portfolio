@@ -26,6 +26,10 @@ a.navbar-brand {
   background: #999;
 }
 
+.navbar-toggle .icon-bar{
+  background: #fff;
+}
+
 #main-menu {
   font-family: 'Lilita One', Arial, serif;
   font-size: 2em;
@@ -55,18 +59,68 @@ a.navbar-brand {
 
 #projectslider {
   position: relative;
-  height: 400px;
+  overflow: hidden;
+}
+
+#projectslider.ng-hide-add, #projectslider.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+#projectslider.ng-hide-add {
+  max-height: 400px;
+  opacity: 1;
+}
+
+#projectslider.ng-hide-add.ng-hide-add-active {
+  max-height: 0;
+  opacity: 0;
+}
+
+#projectslider.ng-hide-remove {
+  max-height: 0px;
+  opacity: 0;
+}
+
+#projectslider.ng-hide-remove.ng-hide-remove-active {
+  max-height: 400px;
+  opacity: 1;
 }
 
 #projectslider .project-detail {
-  padding: 1em 0;
+  padding: 1em 0 0.5em 0;
   border-bottom: 2px dashed #999;
   position: absolute;
   top: 0;
   left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  opacity: 0;
 }
 
-.project-detail.ng-hide-add, .project-detail.ng-hide-remove {
+#projectslider .project-detail.selected{
+  position: relative!important;
+  opacity: 1;
+}
+
+.project-detail.selected-add, .project-detail.selected-remove {
+  -webkit-transition:all linear 1s;
+  transition:all linear 1s;
+  display:block!important;
+}
+
+.project-detail.selected-add {
+  opacity: 1;
+}
+
+.project-detail.selected-remove {
+  opacity: 0;
+}
+
+/*.project-detail.ng-hide-add, .project-detail.ng-hide-remove {
   -webkit-transition:all linear 1s;
   transition:all linear 1s;
   display:block!important;
@@ -90,7 +144,7 @@ a.navbar-brand {
   -webkit-transition:all linear 1s;
   transition:all linear 1s;
   opacity: 1;
-}
+}*/
 
 .each-project {
   text-align: center;
@@ -135,10 +189,17 @@ a.navbar-brand {
   text-align: center;
   margin: 30% auto;
   line-height: 2em;
+  color: #fff;
 }
 
 #project-navigation {
   padding-top: 1em;
+  z-index: 9999px;
+  float: right;
+}
+
+#project-navigation .nav>li {
+  display: inline-block;
 }
 
 #footer {
