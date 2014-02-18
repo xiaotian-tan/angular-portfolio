@@ -1,0 +1,17 @@
+{
+  "name": "angular-portfolio",
+  "version": "1.0.0",
+  "main": "app/css/app.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular-bootstrap": null,
+    "bootstrap": null,
+    "jquery": null
+  },
+  "devDependencies": {
+  }
+}
+

@@ -7,7 +7,9 @@
     "karma" : "~0.10",
     "karma-junit-reporter" : "~0.1",
     "karma-jasmine" : "~0.1",
-    "protractor" : "~0.17.0"
+    "protractor" : "~0.17.0",
+    "express": "~3.1.0",
+    "mongojs": "~0.7.1"
   },
   "engines": {
     "node": "0.10.x"
