@@ -1,6 +1,6 @@
 var express = require('express'),
-    app = module.exports.app = express(), 
-    db = require('mongojs').connect('angular-portfolio');
+    app = module.exports.app = express();
+    // db = require('mongojs').connect('angular-portfolio');
     
 app.configure(function () {
 	app.use(express.favicon());
