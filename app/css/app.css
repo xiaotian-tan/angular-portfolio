@@ -1,18 +1,18 @@
 /* app css stylesheet */
 body {
   padding-top: 52px;
-  background: url(../img/dark-blackboard.png);
+  background: url(../img/dark-blackboard.png) fixed top;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lilita One', Arial, serif;
 }
 
-a {
+.nav a {
   color: #999;
 }
 
-a:hover {
+.nav a:hover {
   color: #fff;
 }
 
@@ -37,6 +37,16 @@ a.navbar-brand {
 #main-menu>li>a:hover, #main-menu>li.active a {
   background: none;
   color: #fff;
+}
+
+/* HOME */
+#intro {
+  margin: 2em 0;
+}
+.profile-img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
 .page .container {
@@ -82,12 +92,49 @@ a.navbar-brand {
   opacity: 1;
 }
 
-.project-lists {
-  padding: 1em 0;
-}
-
 .each-project {
   text-align: center;
+  margin: 1em 0;
+}
+
+.each-project a {
+  position: relative;
+  display: block;
+}
+
+
+.each-project .mask {
+    position:absolute;
+    left:0;
+    top:0;
+    background:#000;
+    background: rgba(0, 0, 0, .5);
+    width:100%;
+    height:100%;
+    text-align:center;
+    opacity:0;
+    -moz-opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -moz-transition:opacity 0.3s;
+    -webkit-transition:opacity 0.3s;
+    -o-transition:opacity 0.3s;
+    transition:opacity 0.3s;
+}
+
+.each-project .mask:hover, .each-project .mask:active {
+    opacity:1;
+    -moz-opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.each-project .title {
+  width: 70%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  vertical-align: middle;
+  text-align: center;
+  margin: 30% auto;
+  line-height: 2em;
 }
 
 #project-navigation {
@@ -95,7 +142,7 @@ a.navbar-brand {
 }
 
 #footer {
-  margin-top: 2em;
+  margin: 2em 0;
   color: #fff;
 }
 
@@ -103,9 +150,32 @@ a.navbar-brand {
   margin-left: 0.5em;
 }
 
+ul.aboutme {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.aboutme li span.title{
+  display: inline-block;
+  padding: 0.2em 0.2em;
+  font-weight: bold;
+  color: #d44950;
+}
+
+ul.aboutme li span.value{
+  font-style: italic;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
+
+  .profile-img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 }

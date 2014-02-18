@@ -26,9 +26,11 @@
 	</div>
 	<div class="row project-lists">
 		<div ng-repeat="project in projects" class="each-project col-sm-4">
-			<h2>{{ project.title }}</h2>
 			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
             	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive"/>
+            	<div class="mask">
+            		<h3 class="title">{{ project.title }}</h3>
+            	</div>
             </a>
 		</div>
 	</div>
