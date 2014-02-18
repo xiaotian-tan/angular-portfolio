@@ -161,8 +161,9 @@ a.navbar-brand {
   vertical-align: middle;
   text-align: center;
   margin: 30% auto;
-  line-height: 2em;
+  padding: 0.2em 0;
   color: #fff;
+  font-size: 1.2em;
 }
 
 #project-navigation {
@@ -175,6 +176,11 @@ a.navbar-brand {
   display: inline-block;
 }
 
+.skills button {
+  margin-right: 0.5em;
+}
+
+/* Footer */
 #footer {
   margin: 2em 0;
   color: #fff;

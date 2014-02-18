@@ -10,8 +10,10 @@
 				<h2>{{ project.title }}</h2>
 				<div class="project-desc" ng-bind-html="project.description">
 				</div>
-				<div ng-repeat="skill in project.skills">
-					{{ skill }}
+				<div class="skills">
+					<button ng-repeat="skill in project.skills">
+						{{ skill }}
+					</button>
 				</div>
 	        </div>
 	        <!-- prev / next buttons -->
