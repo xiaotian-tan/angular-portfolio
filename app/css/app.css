@@ -120,32 +120,6 @@ a.navbar-brand {
   opacity: 0;
 }
 
-/*.project-detail.ng-hide-add, .project-detail.ng-hide-remove {
-  -webkit-transition:all linear 1s;
-  transition:all linear 1s;
-  display:block!important;
-}
-
-.project-detail.ng-hide-add {
-  opacity: 1;
-}
-
-.project-detail.ng-hide-add.ng-hide-add-active {
-  -webkit-transition:all linear 1s;
-  transition:all linear 1s;
-  opacity: 0;
-}
-
-.project-detail.ng-hide-remove {
-  opacity: 0;
-}
-
-.project-detail.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transition:all linear 1s;
-  transition:all linear 1s;
-  opacity: 1;
-}*/
-
 .each-project {
   text-align: center;
   margin: 1em 0;
@@ -155,7 +129,6 @@ a.navbar-brand {
   position: relative;
   display: block;
 }
-
 
 .each-project .mask {
     position:absolute;
@@ -207,6 +180,14 @@ a.navbar-brand {
   color: #fff;
 }
 
+#copyright {
+  display: table-cell;
+}
+
+#copyright p {
+  margin: 12px 0 0 0;
+}
+
 #footer-menu a {
   margin-left: 0.5em;
 }
@@ -222,10 +203,52 @@ ul.aboutme li span.title{
   padding: 0.2em 0.2em;
   font-weight: bold;
   color: #d44950;
+  margin-right: 0.3em;
+}
+
+ul.aboutme li span.title i.fa{
+  width: 16px;
+  text-align: center;
 }
 
 ul.aboutme li span.value{
   font-style: italic;
+}
+
+/* Contact */
+#contact-intro, #contact-methods {
+  margin: 2em 0;
+}
+
+#contact-methods .box {
+  text-align: center;
+  font-family: 'Lilita One', Arial, serif;
+  font-size: 1.5em;
+  background-color: #F4F4F4;
+
+  -webkit-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+  -moz-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+  box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+  padding: 10px;
+  position: relative;
+}
+
+#contact-methods .box:hover{
+  background-color: #d44950;
+  color: #fff;
+  box-shadow: 0px 4px #232A30;
+  -webkit-box-shadow: 0px 4px #232A30;
+}
+
+#contact-methods .box:hover a{
+  color: #fff;
+}
+
+#map_canvas{
+    width:100%;
+    height: 250px; 
+    border: 5px solid #999;
+    margin-bottom:20px;
 }
 
 /* Customize container */
@@ -235,8 +258,7 @@ ul.aboutme li span.value{
   }
 
   .profile-img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
   }
 
 }

@@ -8,6 +8,9 @@ angular.module('myApp.controllers', []).
 
 
   	}]).
+  	controller('ContactController', ['$scope', function($scope){
+  		
+  	}]).
   	controller('ProjectController', ['$scope', 'Portfolio', '$location', '$anchorScroll', 
   		function($scope, Portfolio, $location, $anchorScroll) {
 

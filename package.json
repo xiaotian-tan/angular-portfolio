@@ -1,7 +1,7 @@
 {
-  "name": "angularjs-seed",
+  "name": "angular-portfolio",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/xiaotian-tan/angular-portfolio",
   "devDependencies": {
     "phantomjs" : "~1.9",
     "karma" : "~0.10",

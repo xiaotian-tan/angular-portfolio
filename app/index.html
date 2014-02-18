@@ -40,6 +40,7 @@
         <ul class="nav navbar-nav pull-right" id="main-menu" navMenu="active">
           <li data-active-link=""><a href="#/">Home</a></li>
           <li data-active-link=""><a href="#/projects">Projects</a></li>
+          <li data-active-link=""><a href="#/contact">Contact</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -47,13 +48,17 @@
   <div data-ng-view="" class="page"></div>
 
   <div id="footer">
-    <div class="container">
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav pull-right" id="footer-menu" navMenu="active">
-          <a href="#" ><i class="fa fa-facebook-square fa-3x"></i></a>
-          <a href="#" ><i class="fa fa-linkedin-square fa-3x"></i></a>
-          <a href="#" ><i class="fa fa-github fa-3x"></i></a>
-        </ul>
+      <div class="container">
+        <div class="col-sm-6" id="copyright">
+          <p>&copy; Created by Xiaotian Tan by using Angular JS</p>
+        </div>
+        <div class="col-sm-6" id="social">
+          <ul class="nav navbar-nav pull-right" id="footer-menu" navMenu="active">
+            <a href="https://www.facebook.com/edison.tan.3154" ><i class="fa fa-facebook-square fa-3x"></i></a>
+            <a href="http://au.linkedin.com/pub/xiaotian-tan/53/a08/21/" ><i class="fa fa-linkedin-square fa-3x"></i></a>
+            <a href="https://github.com/xiaotian-tan" ><i class="fa fa-github fa-3x"></i></a>
+          </ul>
+        </div>
       </div><!--/.nav-collapse -->
     </div>
   </div>
@@ -62,7 +67,7 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
