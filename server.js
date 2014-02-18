@@ -91,6 +91,6 @@ app.put('/api/:collection/:cmd',  function (req, res) {
     db.collection(req.params.collection)[req.params.cmd](req.body, fn(req, res)); 
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("Listening on 3000");
 });
