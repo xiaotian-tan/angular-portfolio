@@ -166,6 +166,14 @@ a.navbar-brand {
   font-size: 1.2em;
 }
 
+.each-project .project-thumb {
+  min-height: 180px;
+}
+
+#projectslider .project-img {
+  min-height: 300px;
+}
+
 #project-navigation {
   padding-top: 1em;
   z-index: 9999px;
@@ -255,6 +263,15 @@ ul.aboutme li span.value{
     height: 250px; 
     border: 5px solid #999;
     margin-bottom:20px;
+}
+
+/* Spinner */
+.spinner {
+  display: block;
+  background: url(../img/spinner.svg) no-repeat center;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 /* Customize container */
