@@ -1,135 +1,123 @@
 /* app css stylesheet */
-body {
-  padding-top: 52px;
-  background: url(../img/dark-blackboard.png) fixed top;
+ body {
+    padding-top: 52px;
+    background: url(../img/dark-blackboard.png) fixed top;
 }
-
+#loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: black url(../img/spinner.svg) no-repeat center;
+    padding: 0.3em;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 9999;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lilita One', Arial, serif;
+    font-family:'Lilita One', Arial, serif;
 }
-
 .nav a {
-  color: #999;
+    color: #999;
 }
-
 .nav a:hover {
-  color: #fff;
+    color: #fff;
 }
-
 a.navbar-brand {
-  font-family: 'Pacifico', Arial, serif;
-  font-size: 2em;
-  color: #fff;
+    font-family:'Pacifico', Arial, serif;
+    font-size: 2em;
+    color: #fff;
 }
-
-.navbar-nav>li>a:hover{
-  background: #999;
+.navbar-nav>li>a:hover {
+    background: #999;
 }
-
-.navbar-toggle .icon-bar{
-  background: #fff;
-}
-
-#main-menu {
-  font-family: 'Lilita One', Arial, serif;
-  font-size: 2em;
+.navbar-toggle .icon-bar {
+    background: #fff;
 }
 #main-menu {
-  background: transparent;
+    font-family:'Lilita One', Arial, serif;
+    font-size: 2em;
 }
-
+#main-menu {
+    background: transparent;
+}
 #main-menu>li>a:hover, #main-menu>li.active a {
-  background: none;
-  color: #fff;
+    background: none;
+    color: #fff;
 }
-
 /* HOME */
-#intro {
-  margin: 2em 0;
+ #intro {
+    margin: 2em 0;
 }
 .profile-img {
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 }
-
 .page .container {
-  background: url(../img/paper_fibers.png);
+    background: url(../img/paper_fibers.png);
 }
-
 #projectslider {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
-
 #projectslider.ng-hide-add, #projectslider.ng-hide-remove {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
-  display:block!important;
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    display:block!important;
 }
-
 #projectslider.ng-hide-add {
-  max-height: 400px;
-  opacity: 1;
+    max-height: 400px;
+    opacity: 1;
 }
-
 #projectslider.ng-hide-add.ng-hide-add-active {
-  max-height: 0;
-  opacity: 0;
+    max-height: 0;
+    opacity: 0;
 }
-
 #projectslider.ng-hide-remove {
-  max-height: 0px;
-  opacity: 0;
+    max-height: 0px;
+    opacity: 0;
 }
-
 #projectslider.ng-hide-remove.ng-hide-remove-active {
-  max-height: 400px;
-  opacity: 1;
+    max-height: 400px;
+    opacity: 1;
 }
-
 #projectslider .project-detail {
-  padding: 1em 0 0.5em 0;
-  border-bottom: 2px dashed #999;
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  display: block;
-  opacity: 0;
+    padding: 1em 0 0.5em 0;
+    border-bottom: 2px dashed #999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    opacity: 0;
 }
-
-#projectslider .project-detail.selected{
-  position: relative!important;
-  opacity: 1;
+#projectslider .project-detail.selected {
+    position: relative!important;
+    opacity: 1;
 }
-
 .project-detail.selected-add, .project-detail.selected-remove {
-  -webkit-transition:all linear 1s;
-  transition:all linear 1s;
-  display:block!important;
+    -webkit-transition:all linear 1s;
+    transition:all linear 1s;
+    display:block!important;
 }
-
 .project-detail.selected-add {
-  opacity: 1;
+    opacity: 1;
 }
-
 .project-detail.selected-remove {
-  opacity: 0;
+    opacity: 0;
 }
-
 .each-project {
-  text-align: center;
-  margin: 1em 0;
+    text-align: center;
+    margin: 1em 0;
 }
-
 .each-project a {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
-
 .each-project .mask {
     position:absolute;
     left:0;
@@ -147,141 +135,116 @@ a.navbar-brand {
     -o-transition:opacity 0.3s;
     transition:opacity 0.3s;
 }
-
 .each-project .mask:hover, .each-project .mask:active {
     opacity:1;
     -moz-opacity:1;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
 .each-project .title {
-  width: 70%;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  vertical-align: middle;
-  text-align: center;
-  margin: 30% auto;
-  padding: 0.2em 0;
-  color: #fff;
-  font-size: 1.2em;
+    width: 70%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    vertical-align: middle;
+    text-align: center;
+    margin: 30% auto;
+    padding: 0.2em 0;
+    color: #fff;
+    font-size: 1.2em;
 }
-
 .each-project .project-thumb {
-  min-height: 180px;
+    min-height: 180px;
 }
-
 #projectslider .project-img {
-  min-height: 300px;
+    min-height: 300px;
 }
-
 #project-navigation {
-  padding-top: 1em;
-  z-index: 9999px;
-  float: right;
+    padding-top: 1em;
+    z-index: 9999px;
+    float: right;
 }
-
 #project-navigation .nav>li {
-  display: inline-block;
+    display: inline-block;
 }
-
 .skills button {
-  margin-right: 0.5em;
+    margin-right: 0.5em;
 }
-
 /* Footer */
-#footer {
-  margin: 2em 0;
-  color: #fff;
+ #footer {
+    margin: 2em 0;
+    color: #fff;
 }
-
 #copyright {
-  display: table-cell;
+    display: table-cell;
 }
-
 #copyright p {
-  margin: 12px 0 0 0;
+    margin: 12px 0 0 0;
 }
-
 #footer-menu a {
-  margin-left: 0.5em;
+    margin-left: 0.5em;
 }
-
 ul.aboutme {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
-
-ul.aboutme li span.title{
-  display: inline-block;
-  padding: 0.2em 0.2em;
-  font-weight: bold;
-  color: #d44950;
-  margin-right: 0.3em;
+ul.aboutme li span.title {
+    display: inline-block;
+    padding: 0.2em 0.2em;
+    font-weight: bold;
+    color: #d44950;
+    margin-right: 0.3em;
 }
-
-ul.aboutme li span.title i.fa{
-  width: 16px;
-  text-align: center;
+ul.aboutme li span.title i.fa {
+    width: 16px;
+    text-align: center;
 }
-
-ul.aboutme li span.value{
-  font-style: italic;
+ul.aboutme li span.value {
+    font-style: italic;
 }
-
 /* Contact */
-#contact-intro, #contact-methods {
-  margin: 2em 0;
+ #contact-intro, #contact-methods {
+    margin: 2em 0;
 }
-
 #contact-methods .box {
-  text-align: center;
-  font-family: 'Lilita One', Arial, serif;
-  font-size: 1.5em;
-  background-color: #F4F4F4;
-
-  -webkit-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
-  -moz-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
-  box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
-  padding: 10px;
-  position: relative;
+    text-align: center;
+    font-family:'Lilita One', Arial, serif;
+    font-size: 1.5em;
+    background-color: #F4F4F4;
+    -webkit-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+    -moz-box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+    box-shadow:0 3px 0px #ccc, 0 0 20px #DFDFDF inset;
+    padding: 10px;
+    position: relative;
 }
-
-#contact-methods .box:hover{
-  background-color: #d44950;
-  color: #fff;
-  box-shadow: 0px 4px #232A30;
-  -webkit-box-shadow: 0px 4px #232A30;
+#contact-methods .box:hover {
+    background-color: #d44950;
+    color: #fff;
+    box-shadow: 0px 4px #232A30;
+    -webkit-box-shadow: 0px 4px #232A30;
 }
-
-#contact-methods .box:hover a{
-  color: #fff;
+#contact-methods .box:hover a {
+    color: #fff;
 }
-
-#map_canvas{
+#map_canvas {
     width:100%;
-    height: 250px; 
+    height: 250px;
     border: 5px solid #999;
     margin-bottom:20px;
 }
-
 /* Spinner */
-.spinner {
-  display: block;
-  background: url(../img/spinner.svg) no-repeat center;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
+ .spinner {
+    display: block;
+    background: url(../img/spinner.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
 }
-
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  .profile-img {
-    margin: 20px auto;
-  }
-
+ @media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    .profile-img {
+        margin: 20px auto;
+    }
 }

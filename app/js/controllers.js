@@ -5,8 +5,6 @@
 angular.module('myApp.controllers', []).
 	controller('WelcomeController', ['$scope', function($scope){
 
-
-
   	}]).
   	controller('ContactController', ['$scope', function($scope){
   		
