@@ -138,7 +138,6 @@ angular.module('myApp.directives', []).
 
             scope.$watch('ngSrc', function(newVal) {
                 element.wrap('<span class="spinner"></spinner>');
-                element.addClass('fade');
             });
           }
         };
