@@ -1,124 +1,45 @@
 [
 	{
 		"id": "1",
-		"slug": "safety-tool-app",
-		"title": "SAFETY Tool App",
-		"description": "<p>Take the concept of the SAFETY Tool mnemonic created to up skill fitness professionals in risk management, and present it in a fun and engaging way. A mobile application was the medium of choice due to high mobile engagement in the fitness sector. The overarching objective was to first guide the user through the tool, in an engaging and entertaining format, and create an app that the user found so helpful, that they would keep it on their phone as a point of information reference.</p>",
+		"slug": "project-one",
+		"title": "Project One",
+		"description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>",
 		"skills": [
 			"Lua", 
 			"Corona SDK"
 		],
-		"client": "Guild Risk Equip",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/safetytool.jpg",
-		"link": "https://itunes.apple.com/au/app/safety-tool/id647134834?mt=8"
+		"client": "",
+		"agency": "",
+		"image" : "img/projects/example.jpg",
+		"link": "http://www.example.com.au"
 	},
 	{
 		"id": "2",
-		"slug": "lallarookh",
-		"title": "Lalla Rookh",
-		"description": "<p>The key to this project was to allow users to access the food and drink menu and support the brand in a cool and interesting way.</p>",
+		"slug": "project-two",
+		"title": "Project Two",
+		"description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>",
 		"skills": [
 			"jQuery", 
 			"Python",
 			"HTML & CSS"
 		],
 		"client": "",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/lallarookh1.jpg",
-		"link": "http://lallarookh.com.au"
+		"agency": "",
+		"image" : "img/projects/example.jpg",
+		"link": "http://www.example.com.au"
 	},
 	{
 		"id": "3",
-		"slug": "mggs",
-		"title": "Melbourne Girls Grammar School",
-		"description": "<p>The site structure is heavily content based and needs to encompass individual departments throughout the School. There is a lot of written content for each department, and to change the way their visitors can access the information is a critical task along with creating an easy journey for the different users of the site.</p>",
+		"slug": "project-three",
+		"title": "Project Three",
+		"description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>",
 		"skills": [
-			"php", 
-			"mysql"
+			"PHP", 
+			"MySQL"
 		],
 		"client": "",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/mggs.jpg",
-		"link": "http://www.mggs.edu.au"
-	},
-	{
-		"id": "4",
-		"slug": "veqhrc",
-		"title": "Victorian Equal Opportunity & Human Rights Commission",
-		"description": "<p>This is a seamless, parallax scrolling site that looks great in all major browsers, displaying helpful information and calls to action in an inspiring, savvy manner. All while showcasing the latest and greatest of web development trends. </p>",
-		"skills": [
-			"Mezzanine CMS", 
-			"jQuery",
-			"HTML & CSS"
-		],
-		"client": "",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/human-rights2.jpg",
-		"link": "www.humanrights.vic.gov.au"
-	},
-	{
-		"id": "5",
-		"slug": "birkenhead-point",
-		"title": "Birkenhead Point",
-		"description": "<p>Some of the key features of the site that are worth noting include an easy-to navigate-store finder for the convenience of shoppers, and a store directory which allows customers to easily find their favourite stores through category types and a store map. This shows exactly where a particular store is located in the mall.</p>",
-		"skills": [
-			"Joomla CMS", 
-			"PHP",
-			"jQuery",
-			"HTML & CSS"
-		],
-		"client": "Birkenhead Point",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/birkenhead2.jpg",
-		"link": "www.birkenhead.com.au"
-	},
-	{
-		"id": "6",
-		"slug": "zuzushii",
-		"title": "Zuzushii",
-		"description": "<p>The site was created in the open source CMS Django, using the mezzanine framework, a platform with a focus on speed, flexibility and ease of use for both developer and client alike.</p>",
-		"skills": [
-			"Mezzanine CMS", 
-			"Python",
-			"jQuery",
-			"HTML & CSS"
-		],
-		"client": "Zuzushii",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/zuzushii2.jpg",
-		"link": "www.zuzushii.au"
-	},
-	{
-		"id": "7",
-		"slug": "lukemangan",
-		"title": "Luke Mangan",
-		"description": "<p>The site was developed in Joomla CMS with Virtumart for shopping cart. The site is supporting mobile devices as well. </p>",
-		"skills": [
-			"Jommla CMS", 
-			"PHP",
-			"jQuery",
-			"HTML & CSS"
-		],
-		"client": "Luke Mangan",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/luke-mangan2.jpg",
-		"link": "www.lukemangan.com"
-	},
-	{
-		"id": "8",
-		"slug": "helvetica",
-		"title": "Helvetica",
-		"description": "<p>To implement the bold and unique interface design JavaScript was utilised to link the stylised look with a functioning content management system. </p>",
-		"skills": [
-			"jQuery",
-			"HTML & CSS",
-			"Jommla CMS", 
-			"PHP"
-		],
-		"client": "Helvetica",
-		"agency": "Butterfly Internet",
-		"image" : "img/projects/helvetica1.jpg",
-		"link": "www.helvetica.com.au"
+		"agency": "",
+		"image" : "img/projects/example.jpg",
+		"link": "http://www.example.com.au"
 	}
 ]
