@@ -119,8 +119,27 @@ angular.module('myApp.directives', []).
                     map.setCenter(point);
                     //infowindow.setContent('Zoom: ' + zoomLevel);
                 });
+            }
+        };
+    }).
+    directive('imgPreload', ['$rootScope', function($rootScope) {
+        return {
+          restrict: 'A',
+          scope: {
+            ngSrc: '@'
+          },
+          link: function(scope, element, attrs) {
+            element.on('load', function() {
+                element.addClass('in');
+            }).on('error', function() {
+                //
+                element.removeClass('in');
+            });
 
-            
-        }
-    };
-});
+            scope.$watch('ngSrc', function(newVal) {
+                element.wrap('<span class="spinner"></spinner>');
+                element.addClass('fade');
+            });
+          }
+        };
+    }]);
