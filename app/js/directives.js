@@ -148,7 +148,6 @@ angular.module('myApp.directives', []).
             // TODO: dynamically load images
             queue.loadFile('img/dark-blackboard.png');
             queue.loadFile('img/paper_fibers.png');
-            queue.loadFile('img/profile.png');
             queue.loadFile('img/spinner.svg');
             // queue.loadFile('img/projects/lallarookh1.jpg');
             // queue.loadFile('img/projects/birkenhead2.jpg');
