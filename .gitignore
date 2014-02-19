@@ -4,3 +4,5 @@ node_modules/
 tmp
 .DS_Store
 .idea
+app/data/
+app/projects/
