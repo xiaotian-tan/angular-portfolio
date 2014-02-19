@@ -148,14 +148,14 @@ angular.module('myApp.directives', []).
             // TODO: dynamically load images
             queue.loadFile('img/dark-blackboard.png');
             queue.loadFile('img/paper_fibers.png');
-            queue.loadFile('img/projects/lallarookh1.jpg');
-            queue.loadFile('img/projects/birkenhead2.jpg');
-            queue.loadFile('img/projects/helvetica1.jpg');
-            queue.loadFile('img/projects/human-rights2.jpg');
-            queue.loadFile('img/projects/mggs.jpg');
-            queue.loadFile('img/projects/luke-mangan2.jpg');
-            queue.loadFile('img/projects/safetytool.jpg');
-            queue.loadFile('img/projects/zuzushii2.jpg');
+            // queue.loadFile('img/projects/lallarookh1.jpg');
+            // queue.loadFile('img/projects/birkenhead2.jpg');
+            // queue.loadFile('img/projects/helvetica1.jpg');
+            // queue.loadFile('img/projects/human-rights2.jpg');
+            // queue.loadFile('img/projects/mggs.jpg');
+            // queue.loadFile('img/projects/luke-mangan2.jpg');
+            // queue.loadFile('img/projects/safetytool.jpg');
+            // queue.loadFile('img/projects/zuzushii2.jpg');
 
             queue.addEventListener("complete", function complete(event)
             {
