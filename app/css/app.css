@@ -1,6 +1,5 @@
 /* app css stylesheet */
  body {
-    padding-top: 52px;
     background: url(../img/dark-blackboard.png) fixed top;
 }
 #loading {
@@ -246,5 +245,9 @@ ul.aboutme li span.value {
     }
     .profile-img {
         margin: 20px auto;
+    }
+
+    body {
+      padding-top: 52px;
     }
 }
