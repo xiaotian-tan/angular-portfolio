@@ -26,7 +26,7 @@
 		"client": "",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/lallarookh1.jpg",
-		"link": "http://lallarookh.com.au"
+		"link": "http://www.lallarookh.com.au"
 	},
 	{
 		"id": "3",
@@ -40,7 +40,7 @@
 		"client": "",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/mggs.jpg",
-		"link": "http://www.mggs.edu.au"
+		"link": "http://www.mggs.vic.edu.au"
 	},
 	{
 		"id": "4",
@@ -55,7 +55,7 @@
 		"client": "",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/human-rights2.jpg",
-		"link": "www.humanrights.vic.gov.au"
+		"link": "http://www.humanrights.vic.gov.au"
 	},
 	{
 		"id": "5",
@@ -71,7 +71,7 @@
 		"client": "Birkenhead Point",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/birkenhead2.jpg",
-		"link": "www.birkenhead.com.au"
+		"link": "http://www.birkenhead.com.au"
 	},
 	{
 		"id": "6",
@@ -87,7 +87,7 @@
 		"client": "Zuzushii",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/zuzushii2.jpg",
-		"link": "www.zuzushii.au"
+		"link": "http://www.zuzushii.au"
 	},
 	{
 		"id": "7",
@@ -103,7 +103,7 @@
 		"client": "Luke Mangan",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/luke-mangan2.jpg",
-		"link": "www.lukemangan.com"
+		"link": "http://www.lukemangan.com"
 	},
 	{
 		"id": "8",
@@ -119,6 +119,6 @@
 		"client": "Helvetica",
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/helvetica1.jpg",
-		"link": "www.helvetica.com.au"
+		"link": "http://www.helvetica.com.au"
 	}
 ]
