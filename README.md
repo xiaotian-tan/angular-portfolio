@@ -2,7 +2,7 @@
 
 Example of the simple portfolio app for AngularJS. This app is inspired by [angular-seed](https://github.com/angular/angular-seed) and [angular-express-seed](https://github.com/btford/angular-express-seed).
 
-The live demo can be viewed at [xiaotian-tan.heroku.com](http://xiaotian-tan.heroku.com). The live demo is using Amozon S3 to host static files.
+The live demo can be viewed at [xiaotian-tan.herokuapp.com](http://xiaotian-tan.herokuapp.com). The live demo is using Amozon S3 to host static files.
 
 This project is mainly for learning AngularJS.
 
