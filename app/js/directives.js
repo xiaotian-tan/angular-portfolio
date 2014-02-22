@@ -93,7 +93,7 @@ angular.module('myApp.directives', []).
                     position: point,
                     map: map,
                     icon: {
-                        url:'img/marker.svg',
+                        url:'http://tanportfolio.s3.amazonaws.com/img/marker.svg',
                         size: new google.maps.Size(48, 48),
                           origin: null,
                           anchor: null,
@@ -146,9 +146,9 @@ angular.module('myApp.directives', []).
             var queue = new createjs.LoadQueue(true);
 
             // TODO: dynamically load images
-            queue.loadFile('img/dark-blackboard.png');
-            queue.loadFile('img/paper_fibers.png');
-            queue.loadFile('img/spinner.svg');
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/dark-blackboard.png');
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/paper_fibers.png');
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/spinner.svg');
             // queue.loadFile('img/projects/lallarookh1.jpg');
             // queue.loadFile('img/projects/birkenhead2.jpg');
             // queue.loadFile('img/projects/helvetica1.jpg');
