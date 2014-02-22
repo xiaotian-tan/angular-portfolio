@@ -4,7 +4,7 @@
 		ng-show="isActive($index)" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
 			<!-- project details -->
 			<div class="col-sm-6">
-				<img ng-src="{{project.image}}" class="project-img img-responsive fade" data-img-preload/>
+				<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" class="project-img img-responsive fade" data-img-preload/>
 			</div>
 			<div class="col-sm-6">
 				<h2>{{ project.title }}</h2>
@@ -31,7 +31,7 @@
 	<div class="row project-lists">
 		<div ng-repeat="project in projects" class="each-project col-sm-4">
 			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
-            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
+            	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
             	<div class="mask">
             		<h3 class="title">{{ project.title }}</h3>
             	</div>
