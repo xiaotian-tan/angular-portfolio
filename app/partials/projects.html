@@ -33,7 +33,11 @@
 			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
             	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
             	<div class="mask">
-            		<h3 class="title">{{ project.title }}</h3>
+            		<div class="tc">
+            			<div class="info">
+	            			<h3 class="title">{{ project.title }}</h3>
+            			</div>
+            		</div>
             	</div>
             </a>
 		</div>
