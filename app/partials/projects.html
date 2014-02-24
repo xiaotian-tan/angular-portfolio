@@ -1,7 +1,6 @@
 <div class="container projects">
 	<div class="row" id="projectslider" ng-show="toggleProject()">
-		<div ng-repeat="project in projects" class="project-detail col-sm-12" 
-		ng-show="isActive($index)" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
+		<div ng-repeat="project in projects" class="project-detail col-sm-12" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
 			<!-- project details -->
 			<div class="col-sm-6">
 				<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" class="project-img img-responsive fade" data-img-preload/>
