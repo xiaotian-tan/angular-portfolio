@@ -21,7 +21,6 @@ angular.module('myApp.controllers', []).
 		$scope.projects = Portfolio.query();
 
 		$scope.toggleProject = function (){
-			console.log($scope._showProject);
 			return $scope._showProject;
 		}
 
@@ -45,8 +44,7 @@ angular.module('myApp.controllers', []).
 		$scope.scrollTo = function (id, event, index){
 			// $location.hash(id);
 		    // call $anchorScroll()
-		    console.log('scroll');
-		    $( "html, body" ).animate({
+		    $( "html" ).animate({
 			    scrollTop: 0,
 			  }, 500, "easeInQuart");
 
@@ -59,7 +57,6 @@ angular.module('myApp.controllers', []).
 		    else {
 		    	$scope.showProject(index);
 		    }
-		    $scope.showProject(index);
 		    // event.preventDefault();
 		};
 

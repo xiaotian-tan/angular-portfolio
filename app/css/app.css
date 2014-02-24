@@ -61,18 +61,27 @@ a.navbar-brand {
 #projectslider {
     position: relative;
     overflow: hidden;
-    -webkit-transition:all linear 0.5s;
-    transition:all linear 0.5s;
-    opacity: 1;
-    max-height: 100%;
 }
-#projectslider.ng-hide-add, #projectslider.ng-hide-remove {
-    display:block!important;
+.currentproject.ng-enter, .currentproject.ng-leave {
+    -webkit-transition:all linear 1s;
+    -moz-transition:all linear 1s;
+    -ms-transition:all linear 1s;
+    -o-transition:all linear 1s;
+    transition:all linear 1s;
 }
 
-#projectslider.ng-hide {
+.currentproject.ng-enter {
     opacity: 0;
-    max-height: 0;
+}
+.currentproject.ng-enter.currentproject.ng-enter-active {
+    opacity: 1;
+}
+ 
+.currentproject.ng-leave {
+    opacity: 1;
+}
+.currentproject.ng-leave.currentproject.ng-leave-active {
+    opacity: 0;
 }
 
 #projectslider .project-detail {
@@ -124,7 +133,7 @@ a.navbar-brand {
     -o-transition:left 0.3s;
     transition:left 0.3s;
 }
-.no-touch .each-project:hover .mask {
+.each-project:hover .mask {
     left: 0;
 }
 .each-project .mask .tc{

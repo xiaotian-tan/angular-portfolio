@@ -1,5 +1,5 @@
 <div class="container projects">
-	<div class="row" id="projectslider" ng-show="toggleProject()">
+	<div class="row currentproject" id="projectslider" ng-if="_showProject">
 		<div ng-repeat="project in projects" class="project-detail col-sm-12" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
 			<!-- project details -->
 			<div class="col-sm-6">
