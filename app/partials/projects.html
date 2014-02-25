@@ -1,7 +1,34 @@
 <div id="main">
 	<div class="container projects" id="main">
-		<div class="row project-lists">
-			<div ng-repeat="project in projects" class="each-project col-sm-4">
+		<div class="row">
+			<div class="col-sm-12" id="filtergroup">
+				<b>Filters for skill:</b> 
+				<div class="buttongroup">
+					<label>
+						<input type="checkbox"  data-ng-model="search" ng-true-value="MySQL" ng-false-value="" />
+						<span>MySQL</span>
+					</label>
+					<label>
+						<input type="checkbox"  data-ng-model="search" ng-true-value="PHP" ng-false-value="" />
+						<span>PHP</span>
+					</label>
+					<label>
+						<input type="checkbox"  data-ng-model="search" ng-true-value="HTML & CSS" ng-false-value="" />
+						<span>HTML & CSS</span>
+					</label>
+					<label>
+						<input type="checkbox"  data-ng-model="search" ng-true-value="jQuery" ng-false-value="" />
+						<span>jQuery</span>
+					</label>
+					<label>
+						<input type="checkbox"  data-ng-model="search" ng-true-value="Joomla CMS" ng-false-value="" />
+						<span>Joomla CMS</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row project-lists" masonry>
+			<div ng-repeat="project in projects | skillfilter:search" class="each-project col-sm-4 masonry-brick">
 				<a ng-href="#/projects/{{ project.slug }}" ng-click="scrollTo('projectslider', $event, $index);">
 	            	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
 	            	<div class="mask">

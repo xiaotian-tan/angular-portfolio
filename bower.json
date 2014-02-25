@@ -9,9 +9,8 @@
   "dependencies": {
     "angular-bootstrap": null,
     "bootstrap": null,
-    "jquery": null
+    "jquery": null,
+    "angular-masonry": "~0.7.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
-

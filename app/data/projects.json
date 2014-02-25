@@ -34,8 +34,8 @@
 		"title": "Melbourne Girls Grammar School",
 		"description": "<p>The site structure is heavily content based and needs to encompass individual departments throughout the School. There is a lot of written content for each department, and to change the way their visitors can access the information is a critical task along with creating an easy journey for the different users of the site.</p>",
 		"skills": [
-			"php", 
-			"mysql"
+			"PHP", 
+			"MySQL"
 		],
 		"client": "",
 		"agency": "Butterfly Internet",
@@ -95,7 +95,7 @@
 		"title": "Luke Mangan",
 		"description": "<p>The site was developed in Joomla CMS with Virtumart for shopping cart. The site is supporting mobile devices as well. </p>",
 		"skills": [
-			"Jommla CMS", 
+			"Joomla CMS", 
 			"PHP",
 			"jQuery",
 			"HTML & CSS"
@@ -113,7 +113,7 @@
 		"skills": [
 			"jQuery",
 			"HTML & CSS",
-			"Jommla CMS", 
+			"Joomla CMS", 
 			"PHP"
 		],
 		"client": "Helvetica",

@@ -3,6 +3,7 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
+  'wu.masonry',
   'ui.bootstrap',
   'ngRoute',
   'ngSanitize',
@@ -41,7 +42,6 @@ run(['$rootScope', '$http', '$browser', '$timeout', "$route", "$location", "$win
   function ($scope, $http, $browser, $timeout, $route, $location, $window) {
   $scope.$on("$routeChangeSuccess", function (scope, next, current) {
     $scope.page = $route.current.pageKey;
-    console.log($location.path());
     $window._gaq.push(['_trackPageview', $location.path()]);
   });
 }]);

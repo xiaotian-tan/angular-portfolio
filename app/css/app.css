@@ -63,6 +63,10 @@ a.navbar-brand {
     padding: 2em 0;
 }
 
+.project-lists {
+    overflow: hidden;
+}
+
 .project-info h2 {
     margin-top: 0;
 }
@@ -70,6 +74,8 @@ a.navbar-brand {
 .each-project {
     text-align: center;
     margin: 1em 0;
+    float: left;
+    display: inline;
 }
 .each-project a {
     position: relative;
@@ -116,6 +122,47 @@ a.navbar-brand {
 .each-project .project-thumb {
     min-height: 180px;
 }
+
+
+.masonry-brick {
+    display: none;
+}
+
+.masonry-brick.loaded {
+    display: block;
+}
+
+#filtergroup {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#filtergroup b{
+    font-size: 1.2em;
+    font-family: 'Lilita One', Arial;
+}
+
+#filtergroup .buttongroup {
+    display: inline;
+}
+
+#filtergroup label input[type="checkbox"]{
+    position: absolute;
+    top: -999px;
+}
+
+#filtergroup label span {
+    background: #999;
+    padding: 0.3em 0.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#filtergroup label input:checked + span {
+    background: #d44950;
+    color: #fff;
+}
+
 #projectslider .project-img {
     min-height: 300px;
 }
