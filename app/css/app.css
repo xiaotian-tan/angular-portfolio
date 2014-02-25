@@ -55,7 +55,7 @@ a.navbar-brand {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
 }
-.page .container {
+#main .container {
     background: url(../img/paper_fibers.png);
 }
 
@@ -220,6 +220,62 @@ ul.aboutme li span.value {
     height: 100%;
     z-index: 9999;
 }
+
+.view-enter,.view-leave {
+  -moz-transition:all 2s;
+  -o-transition:all 2s;
+  -webkit-transition:all 2s;
+  transition:all 2s;
+}
+.view-enter {
+  left:20px;
+  opacity:0;
+  position:absolute;
+  top:0;
+}
+.view-enter.view-enter-active {
+  left:0;
+  opacity:1;
+}
+.view-leave {
+  left:0;
+  opacity:1;
+  position:absolute;
+  top:0;
+}
+.view-leave.view-leave-active {
+  left:-20px;
+  opacity:0;
+}
+
+.page.ng-enter, .page.ng-leave {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;   
+}
+.page.ng-enter {
+    opacity: 0;
+    position:absolute;
+    top: 0;
+    left:20px;
+}
+.page.ng-enter-active {
+    opacity: 1;
+    left: 0;
+}
+.page.ng-leave {
+    left: 0;
+    opacity: 1;
+    position:absolute;
+    top: 0;
+}
+.page.ng-leave-active {
+    opacity: 0;
+    left:-20px;
+}
+
+
 /* Customize container */
  @media (min-width: 768px) {
     .container {
