@@ -1,35 +1,7 @@
 <div class="container projects">
-	<div class="row currentproject" id="projectslider" ng-if="_showProject">
-		<div ng-repeat="project in projects" class="project-detail col-sm-12" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
-			<!-- project details -->
-			<div class="col-sm-6">
-				<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" class="project-img img-responsive fade" data-img-preload/>
-			</div>
-			<div class="col-sm-6">
-				<h2>{{ project.title }}</h2>
-				<div class="project-desc" ng-bind-html="project.description">
-				</div>
-				<div class="skills">
-					<button ng-repeat="skill in project.skills" class="btn btn-default">
-						{{ skill }}
-					</button>
-				</div>
-	        </div>
-	        <!-- prev / next buttons -->
-			<div id="project-navigation" class="col-sm-12">
-		        <ul class="nav navbar-nav pull-right">
-		          	<li><a class="arrow prev" href="" ng-click="showPrev()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-			        <li><a class="arrow next" href="" ng-click="showNext()"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-			        <li><a class="button" ng-href="{{ project.link }}"><span class="glyphicon glyphicon-link"></span></a></li>
-			        <li><a class="button" href="" ng-click="closeProject()" close-slide="projectslider"><span class="glyphicon glyphicon-remove-circle"></span></a></li>
-		        </ul>
-	      	</div><!--/.nav-collapse -->
-	      	<div class="clearfix"></div>
-		</div>
-	</div>
 	<div class="row project-lists">
 		<div ng-repeat="project in projects" class="each-project col-sm-4">
-			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
+			<a ng-href="#/projects/{{ project.slug }}" ng-click="scrollTo('projectslider', $event, $index);">
             	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
             	<div class="mask">
             		<div class="tc">

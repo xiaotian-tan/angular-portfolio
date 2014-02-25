@@ -73,17 +73,19 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-sanitize.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-touch.min.js"></script>
 
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
   <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
   <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
-  <script src="http://tanportfolio.s3.amazonaws.com/js/app.js"></script>
-  <script src="http://tanportfolio.s3.amazonaws.com/js/services.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
-  <script src="http://tanportfolio.s3.amazonaws.com/js/filters.js"></script>
-  <script src="http://tanportfolio.s3.amazonaws.com/js/directives.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -96,6 +98,11 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
+  </script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      FastClick.attach(document.body);
+  }, false);
   </script>
 </body>
 </html>

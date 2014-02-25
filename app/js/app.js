@@ -7,13 +7,15 @@ angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
   'ngAnimate',
+  'ngTouch',
+  'myApp.controllers',
+  'myApp.directives',
   'myApp.filters',
   'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/projects', {templateUrl: 'partials/projects.html', controller: 'ProjectController'});
+  $routeProvider.when('/projects', {templateUrl: 'partials/projects.html', controller: 'ProjectsController'});
+  $routeProvider.when('/projects/:projectId', {templateUrl: 'partials/project.html', controller: 'ProjectController'});
   $routeProvider.when('/', {templateUrl: 'partials/welcome.html', controller: 'WelcomeController'});
   $routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'ContactController'});
 

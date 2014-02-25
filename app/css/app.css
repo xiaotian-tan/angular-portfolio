@@ -58,59 +58,15 @@ a.navbar-brand {
 .page .container {
     background: url(../img/paper_fibers.png);
 }
-#projectslider {
-    position: relative;
-    overflow: hidden;
-}
-.currentproject.ng-enter, .currentproject.ng-leave {
-    -webkit-transition:all linear 1s;
-    -moz-transition:all linear 1s;
-    -ms-transition:all linear 1s;
-    -o-transition:all linear 1s;
-    transition:all linear 1s;
+
+#projectdetail {
+    padding: 2em 0;
 }
 
-.currentproject.ng-enter {
-    opacity: 0;
-}
-.currentproject.ng-enter.currentproject.ng-enter-active {
-    opacity: 1;
-}
- 
-.currentproject.ng-leave {
-    opacity: 1;
-}
-.currentproject.ng-leave.currentproject.ng-leave-active {
-    opacity: 0;
+.project-info h2 {
+    margin-top: 0;
 }
 
-#projectslider .project-detail {
-    padding: 1em 0 0.5em 0;
-    border-bottom: 2px dashed #999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    display: block;
-    opacity: 0;
-}
-#projectslider .project-detail.selected {
-    position: relative!important;
-    opacity: 1;
-}
-.project-detail.selected-add, .project-detail.selected-remove {
-    -webkit-transition:all linear 1s;
-    transition:all linear 1s;
-    display:block!important;
-}
-.project-detail.selected-add {
-    opacity: 1;
-}
-.project-detail.selected-remove {
-    opacity: 0;
-}
 .each-project {
     text-align: center;
     margin: 1em 0;
@@ -165,7 +121,6 @@ a.navbar-brand {
 }
 #project-navigation {
     padding-top: 1em;
-    z-index: 9999;
     float: right;
 }
 #project-navigation .nav a{

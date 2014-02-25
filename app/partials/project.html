@@ -1,0 +1,30 @@
+<div class="container">
+      <div class="row" id="projectdetail">
+            <div class="project-info col-sm-12">
+                  <!-- project details -->
+                  <div class="col-sm-6">
+                        <img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" class="project-img img-responsive fade" data-img-preload/>
+                  </div>
+                  <div class="col-sm-6">
+                        <h2>{{ project.title }}</h2>
+                        <div class="project-desc" ng-bind-html="project.description">
+                        </div>
+                        <div class="skills">
+                              <button ng-repeat="skill in project.skills" class="btn btn-default">
+                                    {{ skill }}
+                              </button>
+                        </div>
+              </div>
+              <!-- prev / next buttons -->
+                  <div id="project-navigation" class="col-sm-12">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a class="arrow prev" ng-href="#/projects/{{prevProject.slug}}" ng-click="showPrev(project)"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                          <li><a class="arrow next" ng-href="#/projects/{{nextProject.slug}}" ng-click="showNext(project)"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                          <li><a class="button" ng-href="{{ project.link }}"><span class="glyphicon glyphicon-link"></span></a></li>
+                          <li><a href="#/projects" title="all projects"><span class="fa fa-th"></span></a></li>
+                    </ul>
+                  </div><!--/.nav-collapse -->
+                  <div class="clearfix"></div>
+            </div>
+      </div>
+</div>
