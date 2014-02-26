@@ -10,7 +10,8 @@
     "angular-bootstrap": null,
     "bootstrap": null,
     "jquery": null,
-    "angular-masonry": "~0.7.0"
+    "angular-masonry": "~0.7.0",
+    "angular-touch": "~1.2.13"
   },
   "devDependencies": {}
 }
