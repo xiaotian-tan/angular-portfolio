@@ -138,12 +138,13 @@ a.navbar-brand {
 }
 
 #filtergroup b{
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-family: 'Lilita One', Arial;
+    line-height: 2em;
 }
 
 #filtergroup .buttongroup {
-    display: inline;
+    display: inline-block;
 }
 
 #filtergroup label input[type="checkbox"]{
@@ -151,11 +152,17 @@ a.navbar-brand {
     top: -999px;
 }
 
+#filtergroup label {
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: inline-block;
+    line-height: 1.5em;
+}
+
 #filtergroup label span {
     background: #999;
-    padding: 0.3em 0.5em;
+    padding: 0.4em 0.8em;
     color: #fff;
-    cursor: pointer;
 }
 
 #filtergroup label input:checked + span {
