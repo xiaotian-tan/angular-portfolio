@@ -11,7 +11,8 @@
     "bootstrap": null,
     "jquery": null,
     "angular-masonry": "~0.7.0",
-    "angular-touch": "~1.2.13"
+    "angular-touch": "~1.2.13",
+    "fastclick": "~1.0.0"
   },
   "devDependencies": {}
 }
