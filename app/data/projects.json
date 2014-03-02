@@ -43,6 +43,21 @@
 		"link": "http://www.lallarookh.com.au"
 	},
 	{
+		"id": "11",
+		"slug": "kanganews",
+		"title": "Kanga News",
+		"description": "<p>A well structured news site, features premium content to subscribers only. My responsibility includes front-end development, data migration from client's old site, module and component development in Joomla CMS.</p>",
+		"skills": [
+			"jQuery", 
+			"Python",
+			"HTML & CSS"
+		],
+		"client": "Kanga News",
+		"agency": "Butterfly Internet",
+		"image" : "img/projects/kanganews.jpg",
+		"link": "http://www.kanganews.com"
+	},
+	{
 		"id": "3",
 		"slug": "mggs",
 		"title": "Melbourne Girls Grammar School",
@@ -70,6 +85,22 @@
 		"agency": "Butterfly Internet",
 		"image" : "img/projects/human-rights2.jpg",
 		"link": "http://www.humanrights.vic.gov.au"
+	},
+	{
+		"id": "10",
+		"slug": "lets-prevent-diabetes",
+		"title": "Let's Prevent Diabetes",
+		"description": "<p>This campaign site involves designing & implement MySQL database to manage the local MP data, and an assessment tool for diabetes risks. My responsibility includes create solid front-end code and design and implement the function of \"Email your local MP\".</p>",
+		"skills": [
+			"Joomla CMS", 
+			"MySQL",
+			"HTML & CSS",
+			"jQuery"
+		],
+		"client": "Diabetes Australia",
+		"agency": "",
+		"image" : "img/projects/lets-prevent-diabetes.jpg",
+		"link": "http://www.letspreventdiabetes.org.au"
 	},
 	{
 		"id": "5",
