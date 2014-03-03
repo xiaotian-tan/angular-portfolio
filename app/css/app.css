@@ -311,6 +311,31 @@ ul.aboutme li span.value {
     left:-20px;
 }
 
+/* Skill bar */
+.skills {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.skills li {
+    margin-bottom: 10px;
+    position: relative;
+    background: #ccc;
+}
+.skills span.title {
+    display: block;
+    background: #d44950;
+    color: #fff;
+    padding: 0.2em 0.5em;
+    width: 45%;
+}
+.skills span.value {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    color: #fff;
+}
+
 
 /* Customize container */
  @media (min-width: 768px) {

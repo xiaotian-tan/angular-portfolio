@@ -9,6 +9,22 @@ angular.module('myApp.directives', []).
           elm.text(version);
         };
     }]).
+    directive('animateSkill', ['version', function(version) {
+        return function(scope, elm, attrs) {
+            scope.$watch(function() { 
+                return scope.loaded; 
+            }, 
+            function(loaded) {
+                // when imageloader finish run skillbar animation
+                if (loaded){
+                    var width = elm.find('span.value').text();
+                    elm.find('span.title').animate({
+                        width:width
+                    },1000);
+                }
+            });
+        };
+    }]).
     directive('activeLink', function($location) {
         var link = function(scope, element, attrs) {
             scope.$watch(function() { 
@@ -144,7 +160,7 @@ angular.module('myApp.directives', []).
           restrict: 'A',
           link: function(scope, element, attrs) {
             var queue = new createjs.LoadQueue(true);
-
+            scope.loaded = false;
             // TODO: dynamically load images
             queue.loadFile('img/dark-blackboard.png');
             queue.loadFile('img/paper_fibers.png');
@@ -162,8 +178,13 @@ angular.module('myApp.directives', []).
             {
                 $('#loading').delay(1000).fadeOut(function(){
                         $('#loading').remove();
+                        // set loaded flag to be true to indicate imageloader finished
+                        scope.$apply(function(){
+                            scope.loaded = true;
+                        });
                 });
             });
+
           }
         };
     }]);
