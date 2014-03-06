@@ -23,8 +23,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
-<body>
+<body data-image-loader>
+  <div id="loading"></div>
   <div class="navbar" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -37,48 +40,64 @@
         <a class="navbar-brand" href="#">Xiaotian Tan</a>
       </div>
       <div collapse="isCollapsed" class="navbar-collapse">
-        <ul class="nav navbar-nav pull-right" id="main-menu" navMenu="active">
-          <li data-active-link=""><a href="#/">Home</a></li>
-          <li data-active-link=""><a href="#/projects">Projects</a></li>
-          <li data-active-link=""><a href="#/contact">Contact</a></li>
+        <ul class="nav navbar-nav pull-right" id="main-menu">
+          <li ng-class="{active:page=='home'}"><a href="#/">Home</a></li>
+          <li ng-class="{active:page=='projects'}"><a href="#/projects">Projects</a></li>
+          <li ng-class="{active:page=='contact'}"><a href="#/contact">Contact</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  <div data-ng-view="" class="page"></div>
-
-  <div id="footer">
-      <div class="container">
-        <div class="col-sm-6" id="copyright">
-          <p>&copy; Created by Xiaotian Tan by using Angular JS</p>
-        </div>
-        <div class="col-sm-6" id="social">
-          <ul class="nav navbar-nav pull-right" id="footer-menu" navMenu="active">
-            <a href="https://www.facebook.com/edison.tan.3154" ><i class="fa fa-facebook-square fa-3x"></i></a>
-            <a href="http://au.linkedin.com/pub/xiaotian-tan/53/a08/21/" ><i class="fa fa-linkedin-square fa-3x"></i></a>
-            <a href="https://github.com/xiaotian-tan" ><i class="fa fa-github fa-3x"></i></a>
-          </ul>
-        </div>
-      </div><!--/.nav-collapse -->
-    </div>
+  <div style="position:relative">
+    <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="page"></div>
   </div>
   <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <!-- In production use: -->
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-sanitize.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-touch.min.js"></script>
+
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
-  <script src="lib/angular/angular-sanitize.js"></script>
-  <script src="lib/angular/angular-animate.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+  <script src="bower_components/get-style-property/get-style-property.js"></script>
+  <script src="bower_components/get-size/get-size.js"></script>
+  <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+  <script src="bower_components/eventie/eventie.js"></script>
+  <script src="bower_components/doc-ready/doc-ready.js"></script>
+  <script src="bower_components/matches-selector/matches-selector.js"></script>
+  <script src="bower_components/outlayer/item.js"></script>
+  <script src="bower_components/outlayer/outlayer.js"></script>
+  <script src="bower_components/masonry/masonry.js"></script>
+  <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+  <script src="http://passy.github.io/angular-masonry/angular-masonry.min.js"></script>
+
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48349183-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </body>
 </html>

@@ -9,6 +9,22 @@ angular.module('myApp.directives', []).
           elm.text(version);
         };
     }]).
+    directive('animateSkill', ['version', function(version) {
+        return function(scope, elm, attrs) {
+            scope.$watch(function() { 
+                return scope.loaded; 
+            }, 
+            function(loaded) {
+                // when imageloader finish run skillbar animation
+                if (loaded){
+                    var width = elm.find('span.value').text();
+                    elm.find('span.title').animate({
+                        width:width
+                    },1000);
+                }
+            });
+        };
+    }]).
     directive('activeLink', function($location) {
         var link = function(scope, element, attrs) {
             scope.$watch(function() { 
@@ -93,7 +109,7 @@ angular.module('myApp.directives', []).
                     position: point,
                     map: map,
                     icon: {
-                        url:'img/marker.svg',
+                        url:'http://tanportfolio.s3.amazonaws.com/img/marker.svg',
                         size: new google.maps.Size(48, 48),
                           origin: null,
                           anchor: null,
@@ -119,8 +135,56 @@ angular.module('myApp.directives', []).
                     map.setCenter(point);
                     //infowindow.setContent('Zoom: ' + zoomLevel);
                 });
+            }
+        };
+    }).
+    directive('imgPreload', ['$rootScope', function($rootScope) {
+        return {
+          restrict: 'A',
+          link: function(scope, element, attrs) {
+            element.on('load', function() {
+                element.addClass('in');
+            }).on('error', function() {
+                //
+                element.removeClass('in');
+            });
 
-            
-        }
-    };
-});
+            scope.$watch('ngSrc', function(newVal) {
+                element.wrap('<span class="spinner"></spinner>');
+            });
+          }
+        };
+    }]).
+    directive('imageLoader', ['$rootScope', function($rootScope) {
+        return {
+          restrict: 'A',
+          link: function(scope, element, attrs) {
+            var queue = new createjs.LoadQueue(true);
+            scope.loaded = false;
+            // TODO: dynamically load images
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/dark-blackboard.png');
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/paper_fibers.png');
+            queue.loadFile('http://tanportfolio.s3.amazonaws.com/img/spinner.svg');
+            // queue.loadFile('img/projects/lallarookh1.jpg');
+            // queue.loadFile('img/projects/birkenhead2.jpg');
+            // queue.loadFile('img/projects/helvetica1.jpg');
+            // queue.loadFile('img/projects/human-rights2.jpg');
+            // queue.loadFile('img/projects/mggs.jpg');
+            // queue.loadFile('img/projects/luke-mangan2.jpg');
+            // queue.loadFile('img/projects/safetytool.jpg');
+            // queue.loadFile('img/projects/zuzushii2.jpg');
+
+            queue.addEventListener("complete", function complete(event)
+            {
+                $('#loading').delay(1000).fadeOut(function(){
+                        $('#loading').remove();
+                        // set loaded flag to be true to indicate imageloader finished
+                        scope.$apply(function(){
+                            scope.loaded = true;
+                        });
+                });
+            });
+
+          }
+        };
+    }]);

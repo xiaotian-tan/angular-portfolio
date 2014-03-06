@@ -1,42 +1,46 @@
-<div class="container projects">
-	<div class="row" id="projectslider" ng-show="toggleProject()">
-		<div ng-repeat="project in projects" class="project-detail col-sm-12" 
-		ng-show="isActive($index)" ng-animate="'slide'" ng-class="{selected: $index==_Index}">
-			<!-- project details -->
-			<div class="col-sm-6">
-				<img ng-src="{{project.image}}" class="project-img img-responsive"/>
+<div id="main">
+	<div class="container projects" id="main">
+		<div class="row">
+			<menu class="col-sm-12" id="filtergroup">
+				<b>Filters for skill:</b> 
+				<div class="buttongroup" onclick="">
+					<label for="skill-mysql">
+						<input type="checkbox"  data-ng-model="search" ng-true-value="MySQL" ng-false-value="" id="skill-mysql"/>
+						<span>MySQL</span>
+					</label>
+					<label for="skill-php">
+						<input type="checkbox"  data-ng-model="search" ng-true-value="PHP" ng-false-value="" id="skill-php"/>
+						<span>PHP</span>
+					</label>
+					<label for="skill-htmlcss">
+						<input type="checkbox"  data-ng-model="search" ng-true-value="HTML & CSS" ng-false-value="" id="skill-htmlcss" />
+						<span>HTML & CSS</span>
+					</label>
+					<label for="skill-jquery">
+						<input type="checkbox"  data-ng-model="search" ng-true-value="jQuery" ng-false-value="" id="skill-jquery"/>
+						<span>jQuery</span>
+					</label>
+					<label for="skill-joomla">
+						<input type="checkbox"  data-ng-model="search" ng-true-value="Joomla CMS" ng-false-value="" id="skill-joomla"/>
+						<span>Joomla CMS</span>
+					</label>
+				</div>
+			</menu>
+		</div>
+		<div class="row project-lists" masonry>
+			<div ng-repeat="project in projects | skillfilter:search" class="each-project col-sm-4 masonry-brick">
+				<a ng-href="#/projects/{{ project.slug }}" ng-click="scrollTo('projectslider', $event, $index);">
+	            	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
+	            	<div class="mask">
+	            		<div class="tc">
+	            			<div class="info">
+		            			<h3 class="title">{{ project.title }}</h3>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </a>
 			</div>
-			<div class="col-sm-6">
-				<h2>{{ project.title }}</h2>
-				<div class="project-desc" ng-bind-html="project.description">
-				</div>
-				<div class="skills">
-					<button ng-repeat="skill in project.skills">
-						{{ skill }}
-					</button>
-				</div>
-	        </div>
-	        <!-- prev / next buttons -->
-			<div id="project-navigation" class="col-sm-12">
-		        <ul class="nav navbar-nav pull-right">
-		          	<li><a class="arrow prev" href="" ng-click="showPrev()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-			        <li><a class="arrow next" href="" ng-click="showNext()"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-			        <li><a class="button" ng-href="{{ project.link }}"><span class="glyphicon glyphicon-link"></span></a></li>
-			        <li><a class="button" href="" ng-click="closeProject()" close-slide="projectslider"><span class="glyphicon glyphicon-remove-circle"></span></a></li>
-		        </ul>
-	      	</div><!--/.nav-collapse -->
-	      	<div class="clearfix"></div>
 		</div>
 	</div>
-	<div class="row project-lists">
-		<div ng-repeat="project in projects" class="each-project col-sm-4">
-			<a href="" ng-click="scrollTo('projectslider', $event, $index);">
-            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive"/>
-            	<div class="mask">
-            		<h3 class="title">{{ project.title }}</h3>
-            	</div>
-            </a>
-		</div>
-	</div>
-	
 </div>
+<ng-include src="'partials/footer.html'"></ng-include>

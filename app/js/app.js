@@ -3,19 +3,46 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
+  'wu.masonry',
   'ui.bootstrap',
   'ngRoute',
   'ngSanitize',
   'ngAnimate',
+  'ngTouch',
+  'myApp.controllers',
+  'myApp.directives',
   'myApp.filters',
   'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/projects', {templateUrl: 'partials/projects.html', controller: 'ProjectController'});
-  $routeProvider.when('/', {templateUrl: 'partials/welcome.html', controller: 'WelcomeController'});
-  $routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'ContactController'});
+  $routeProvider.when('/projects', {
+    templateUrl: 'partials/projects.html', 
+    controller: 'ProjectsController',
+    pageKey: 'projects'
+  });
+  $routeProvider.when('/projects/:projectId', {
+    templateUrl: 'partials/project.html', 
+    controller: 'ProjectController',
+    pageKey: 'projects'
+  });
+  $routeProvider.when('/', {
+    templateUrl: 'partials/welcome.html', 
+    controller: 'WelcomeController',
+    pageKey: 'home'
+  });
+  $routeProvider.when('/contact', {
+    templateUrl: 'partials/contact.html', 
+    controller: 'ContactController',
+    pageKey: 'contact'
+  });
 
   $routeProvider.otherwise({redirectTo: '/'});
+}]).
+run(['$rootScope', '$http', '$browser', '$timeout', "$route", "$location", "$window", 
+  function ($scope, $http, $browser, $timeout, $route, $location, $window) {
+    FastClick.attach(document.body);
+    $scope.$on("$routeChangeSuccess", function (scope, next, current) {
+      $scope.page = $route.current.pageKey;
+      $window._gaq.push(['_trackPageview', $location.path()]);
+    });
 }]);

@@ -5,4 +5,5 @@ tmp
 .DS_Store
 .idea
 app/data/
-app/projects/
+app/img/
+.sass-cache/
