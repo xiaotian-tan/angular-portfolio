@@ -6,3 +6,4 @@ tmp
 .idea
 app/data/
 app/img/
+.sass-cache/
