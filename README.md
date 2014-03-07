@@ -2,7 +2,7 @@
 
 Example of the simple portfolio app for AngularJS. This app is inspired by [angular-seed](https://github.com/angular/angular-seed) and [angular-express-seed](https://github.com/btford/angular-express-seed).
 
-The live demo can be viewed at [xiaotian-tan.heroku.com](http://xiaotian-tan.heroku.com). The live demo is using Amozon S3 to host some static files like images and project data files.
+The live site can be viewed at [xiaotiantan.com](http://www.xiaotiantan.com). The live site is using Amozon S3 to host some static files like images and project data files.
 
 ### Grunt: 
 `Gruntfile.js`
