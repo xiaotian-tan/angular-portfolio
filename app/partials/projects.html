@@ -27,10 +27,10 @@
 				</div>
 			</menu>
 		</div>
-		<div class="row project-lists" masonry>
-			<div ng-repeat="project in projects | skillfilter:search" class="each-project col-sm-4 masonry-brick">
+		<div class="row project-lists" masonry preserve-order>
+			<div ng-repeat="project in projects | skillfilter:search | orderBy:'-id'" class="each-project col-sm-4 col-xs-6 masonry-brick">
 				<a ng-href="#/projects/{{ project.slug }}" ng-click="scrollTo('projectslider', $event, $index);">
-	            	<img ng-src="http://tanportfolio.s3.amazonaws.com/{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
+	            	<img ng-src="{{project.image}}" alt="{{project.title}}" title="{{project.title}}" class="img-responsive project-thumb fade" data-img-preload />
 	            	<div class="mask">
 	            		<div class="tc">
 	            			<div class="info">

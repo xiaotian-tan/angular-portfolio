@@ -6,4 +6,5 @@ tmp
 .idea
 app/data/
 app/img/
+app/bower_components/
 .sass-cache/
